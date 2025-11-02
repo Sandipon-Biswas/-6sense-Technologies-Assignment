@@ -1,5 +1,5 @@
-# 6sense-Technologies-Assignment
-
+# 6sense-Technologies-Assignment 
+I completed this assignment using NestJS, as I enjoy working with NestJS and appreciate its modular architecture.
 # Database Design - Data Model Diagram
 
 ![Database ER Diagram](./Database%20ER%20diagram.png)
