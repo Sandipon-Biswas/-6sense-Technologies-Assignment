@@ -2,7 +2,7 @@
 
 # Database Design - Data Model Diagram
 
-![Database ER Diagram](./database-design.png)
+![Database ER Diagram](./Database%20ER%20diagram.png)
 
 ### Entity Relationship Diagram
 - **One Category** → **Many Products**
