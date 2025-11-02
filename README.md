@@ -1,4 +1,20 @@
-# 🛍️ E-commerce API Documentation
+# 🛍️ 6sense-Technologies-Assignment
+
+# Database Design - Data Model Diagram
+
+![Database ER Diagram](./database-design.png)
+
+### Entity Relationship Diagram
+- **One Category** → **Many Products**
+- `productCode` is **globally unique**
+- `categoryId` is a **foreign key** referencing `Category._id`
+
+
+
+
+
+
+ API Documentation
 
 This document e API endpoints for managing **Categories** and **Products**.
 
@@ -16,7 +32,7 @@ The API is hosted locally at: `http://localhost:3000`
 
 Creates a new product category.
 
-* **URL:** `/category`
+* **URL:** `http://localhost:3000/category`
 * **Method:** `POST`
 * **Request Body (JSON):**
     ```json
@@ -35,11 +51,11 @@ Creates a new product category.
     }
     ```
 
-### 2. Get All Categories (`GET /category`)
+### 2. Get All Categories (`GET   /category`)
 
 Retrieves a list of all product categories.
 
-* **URL:** `/category`
+* **URL:** `http://localhost:3000/category`
 * **Method:** `GET`
 * **Success Response (200 OK):**
     ```json
@@ -73,11 +89,11 @@ Retrieves a list of all product categories.
 
 ## 📦 Product Endpoints
 
-### 1. Create a New Product (`POST /products`)
+### 1. Create a New Product (`POST    /products`)
 
 Creates a new product and links it to a category.
 
-* **URL:** `/products`
+* **URL:** `http://localhost:3000/products`
 * **Method:** `POST`
 * **Request Body (JSON):**
     > **Note:** The `category` field requires a valid Category `_id`. Example uses **Electronics** ID: `690752d436b9886a8a4e2f5a`.
@@ -113,7 +129,7 @@ Creates a new product and links it to a category.
 
 Updates details of an existing product using its ID.
 
-* **URL:** `/products/{productId}` (e.g., `/products/6907562936b9886a8a4e2f76`)
+* **URL:** `http://localhost:3000/products/{productId}` (e.g., `/products/6907562936b9886a8a4e2f76`)
 * **Method:** `PUT`
 * **Request Body (JSON):**
     > Only fields to be updated are required.
@@ -146,7 +162,7 @@ Updates details of an existing product using its ID.
 
 Retrieves a list of products and supports filtering via query parameters.
 
-* **URL:** `/products`
+* **URL:** `http://localhost:3000/products`
 * **Method:** `GET`
 
 #### 🔎 Search and Filtering Options:
@@ -158,7 +174,7 @@ Retrieves a list of products and supports filtering via query parameters.
 
 #### **Example 1: Get All Products**
 
-* **URL:** `/products`
+* **URL:** `http://localhost:3000/products`
 * **Response:**
     ```json
     [
@@ -178,7 +194,7 @@ Retrieves a list of products and supports filtering via query parameters.
 
 #### **Example 2: Filter by Category**
 
-* **URL:** `/products?category=690752e436b9886a8a4e2f60`
+* **URL:** `http://localhost:3000/products?category=690752e436b9886a8a4e2f60`
 * **Response (Products in 'laptop' category):**
     ```json
     [
@@ -197,7 +213,7 @@ Retrieves a list of products and supports filtering via query parameters.
 
 #### **Example 3: Search by Name**
 
-* **URL:** `/products?name=alpha`
+* **URL:** `http://localhost:3000/products?name=alpha`
 * **Response (Products with 'alpha' in name):**
     ```json
     [
@@ -216,7 +232,7 @@ Retrieves a list of products and supports filtering via query parameters.
 
 #### **Example 4: Combined Filter (Category and Name)**
 
-* **URL:** `/products?category=690752e436b9886a8a4e2f60&name=h`
+* **URL:** `http://localhost:3000/products?category=690752e436b9886a8a4e2f60&name=h`
 * **Response (Products in 'laptop' category with 'h' in name):**
     ```json
     [
