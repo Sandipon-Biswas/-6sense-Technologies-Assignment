@@ -1,4 +1,4 @@
-# 🛍️ 6sense-Technologies-Assignment
+# 6sense-Technologies-Assignment
 
 # Database Design - Data Model Diagram
 
