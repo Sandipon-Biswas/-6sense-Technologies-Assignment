@@ -11,7 +11,7 @@ import { CategoryModule } from './category/category.module';
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
-      envFilePath: '.env', // এটা দিলে পুরো প্রজেক্টে config ব্যবহার করা যাবে, আলাদা করে import লাগবে না
+      envFilePath: '.env', //
     }),
     MongooseModule.forRoot(
       'mongodb+srv://ass:ass@cluster0.rt0m5do.mongodb.net/',
